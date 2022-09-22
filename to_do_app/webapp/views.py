@@ -17,7 +17,8 @@ def to_do_add(request):
     to_do_data = {
         'description': request.POST.get('description'),
         'status': request.POST.get('status'),
-        'deadline': request.POST.get('deadline')
+        'deadline': request.POST.get('deadline'),
+        'full_description': request.POST.get('full_description')
     }
     to_do = ToDo.objects.create(**to_do_data)
     return redirect('/')
