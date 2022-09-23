@@ -18,6 +18,7 @@
             <p class="text">Description: {{action.description}}</p>
             <p class="text">Status: {{action.status}}</p>
             <p class="text">Deadline: {{action.deadline}}</p>
+            <a class="delete_link" href="/to_do/{{action.pk}}">Detail</a>
             <a class="delete_link" href="/delete?pk={{action.pk}}">Delete</a>
         </div>
         {%endfor%}
