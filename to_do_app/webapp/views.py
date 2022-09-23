@@ -29,3 +29,8 @@ def delete_to_do(request):
     to_do_delete.delete()
     return redirect('/')
 
+
+def detail_to_do(request, pk):
+    to_do = ToDo.objects.get(pk=pk)
+    return render (request, 'to_do.html', context = {'to_do': to_do})
+

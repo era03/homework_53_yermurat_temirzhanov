@@ -23,6 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', webapp_views.index_view),
     path('add', webapp_views.to_do_add),
-    path('delete', webapp_views.delete_to_do)
+    path('delete', webapp_views.delete_to_do),
+    path('to_do/', webapp_views.index_view),
+    path('to_do/<int:pk>', webapp_views.detail_to_do)
 
 ]
